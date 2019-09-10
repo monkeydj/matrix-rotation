@@ -4,6 +4,10 @@ const EOL = require('os').EOL;
 
 module.exports = { EOL, readInputs };
 
+/**
+ * read the file & parse into square matrix of numbers
+ * @param {string} filePath - path to location of file matrix.txt
+ */
 function readInputs(filePath) {
 
     var file = readFileSync(filePath, { encoding: 'utf8' });
