@@ -30,6 +30,10 @@ function readInputs(filePath) {
 
 var feedingFile = `${__dirname}/matrix.txt`;
 
-var data = readInputs(feedingFile);
+var { kTimes, matrix } = readInputs(feedingFile);
 
-console.log(data);
+console.log('before:' + EOL, matrix);
+
+while (--kTimes > 0) matrix = rotate90(matrix);
+
+console.log('after rotated:' + EOL, matrix);
