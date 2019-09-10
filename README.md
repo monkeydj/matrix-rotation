@@ -20,6 +20,6 @@ The second argument is the number of times of rotation
 
 ## Complexity
 
-Space: O(n)
+Space: O(n^2)
 
 Time: O((n/2)*k)
