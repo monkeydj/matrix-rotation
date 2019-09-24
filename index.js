@@ -10,7 +10,7 @@ module.exports.rotateOnce = rotate90;
 function rotate(sqrMatrix, times = 0) {
     // since rotating multiples of 4 times results in the same beginning matrix
     // if actualTimes is 0, then there's no rotation happened
-    var actualTimes = times % 4, rotated = Array.from(sqrMatrix);
+    var actualTimes = times % 4, rotated = clone(sqrMatrix);
 
     while (actualTimes-- > 0) rotated = rotate90(rotated);
 
@@ -47,4 +47,12 @@ function rotate90(sqrMatrix) {
 
     return sqrMatrix;
 
+}
+
+/**
+ * silly deep copy of passed 2d array
+ * @param {string[]} arr
+ */
+function clone(arr) {
+    return JSON.parse(JSON.stringify(arr));
 }
