@@ -1,14 +1,20 @@
 # matrix-rotation
 
-## Inputs 
+## Complexity
 
-Filename: matrix.txt
+Space: O(n^2)
 
-Modify its content with desired square matrix
+Time: O((n/2)*k)
 
-Each line is a matrix row, with each element separated by spaces
+## Test
 
-## Execution
+```bash
+$ npm test
+```
+
+## One-time execution
+
+Modify the file `matrix.sample.js` with desired square matrix
 
 Run following command:
 
@@ -17,9 +23,3 @@ $ node rotate <k times>
 ```
 
 The second argument is the number of times of rotation
-
-## Complexity
-
-Space: O(n^2)
-
-Time: O((n/2)*k)
