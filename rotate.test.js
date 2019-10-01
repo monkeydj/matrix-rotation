@@ -97,3 +97,31 @@ describe('rotate a 5-by-5 matrix', () => {
     });
 
 });
+
+describe('0-time rotation won\'t produce any change', () => {
+
+    test('output of 4-by-4 matrix is the same as input', () => {
+         let output = Array.from(inputs.square4);
+         expect(rotate(inputs.square4, 0)).toStrictEqual(output);
+    })
+
+    test('output of 5-by-5 matrix is the same as input', () => {
+        let output = Array.from(inputs.square5);
+        expect(rotate(inputs.square5, 0)).toStrictEqual(output);
+   })
+
+});
+
+describe('rotation with negative times, like -1, won\'t also produce any change', () => {
+
+    test('output of 4-by-4 matrix is the same as input', () => {
+         let output = Array.from(inputs.square4);
+         expect(rotate(inputs.square4, -1)).toStrictEqual(output);
+    })
+
+    test('output of 5-by-5 matrix is the same as input', () => {
+        let output = Array.from(inputs.square5);
+        expect(rotate(inputs.square5, -1)).toStrictEqual(output);
+   })
+
+});
