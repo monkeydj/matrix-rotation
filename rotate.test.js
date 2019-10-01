@@ -1,6 +1,7 @@
 const rotate = require('./index');
 
 var inputs = {
+    squareVoid: [],
     square4: [
         [0, 2, 3, 4],
         [5, 0, 7, 8],
@@ -15,6 +16,21 @@ var inputs = {
         [51, 52, 53, 54, 0]
     ]
 };
+
+
+describe('input of 0-by-0 matrix always produces output of 0-by-0 matrix', () => {
+
+    const testSameIO = (times) => expect(rotate(inputs.squareVoid, times)).toStrictEqual([]);
+
+    test('regardless rotating 1 time', () => testSameIO(1));
+    test('regardless rotating 2 times', () => testSameIO(2));
+    test('regardless rotating 3 times', () => testSameIO(3));
+    test('regardless rotating 4 times', () => testSameIO(4));
+    test('regardless rotating 0 times', () => testSameIO(0));
+    test('or with negative rotation times, like -1', () => testSameIO(-1));
+
+});
+
 
 describe('rotate a 4-by-4 matrix', () => {
 
@@ -55,6 +71,7 @@ describe('rotate a 4-by-4 matrix', () => {
     });
 
 });
+
 
 describe('rotate a 5-by-5 matrix', () => {
 
@@ -97,6 +114,7 @@ describe('rotate a 5-by-5 matrix', () => {
     });
 
 });
+
 
 describe('0-time rotation won\'t produce any change', () => {
 
