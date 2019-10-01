@@ -1,6 +1,6 @@
 {
   "name": "matrix-rotation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple matrix rotation with 90deg clockwise of each rotation",
   "main": "index.js",
   "engines": {
